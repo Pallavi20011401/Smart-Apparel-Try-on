@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Virtual Try-On</title>
+    <style>
+      body { font-family: sans-serif; margin: 2rem; }
+      .error { color: red; white-space: pre-wrap; background: #fee; padding: 1rem; }
+      img { max-width: 300px; margin-top: 1rem; }
+    </style>
+  </head>
+  <body>
+    <h1>Virtual Try-On</h1>
+    <form method="post" enctype="multipart/form-data">
+      <label>Person Image (JPEG/PNG):</label><br>
+      <input type="file" name="person" accept="image/*" required><br><br>
+      <label>Cloth Image (PNG w/ alpha):</label><br>
+      <input type="file" name="cloth" accept="image/png" required><br><br>
+      <button type="submit">Try On</button>
+    </form>
+
+    {% if error %}
+      <div class="error">
+        <strong>Error:</strong> {{ error }}
+        {% if tb %}
+        <pre>{{ tb }}</pre>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% if result %}
+      <h2>Result</h2>
+      <img src="{{ url_for('static', filename='result.png') }}">
+    {% endif %}
+  </body>
+</html>
