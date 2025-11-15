@@ -1,15 +1,4 @@
-Here is a polished, professional **README.md** for your **Smart-Apparel-Try-On** project, fully based on your report content and written in a clean GitHub-ready style.
-You can **copy–paste the entire block** directly into your repository.
-
----
-
-````markdown
 # 👗 Smart Apparel Try-On – AI Driven Virtual Try-On System (CP-VTON+)
-
-This repository contains an AI-based **Virtual Try-On (VTON)** system that lets users visualize how clothing items look on them—without physically wearing them.  
-The project is built using the **CP-VTON+** framework, a two-stage deep learning pipeline for realistic person-to-clothes try-on generation.
-
----
 
 ## 🚀 1. Project Overview
 
